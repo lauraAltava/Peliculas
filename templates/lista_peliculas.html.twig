@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}Peliculas{% endblock %}
+{% block body %}
+    <h1>Listado de peliculas</h1>
+    {% if peliculas %}
+        {% for pelicula in peliculas %}
+            {{ include ('partials/datos_pelicula.html.twig', { 'pelicula': pelicula }) }}
+    {% endfor %}
+{% else %}
+        <p> No se han encontrado peliculas</p>
+    {% endif %}
+{% endblock %}

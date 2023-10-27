@@ -1,0 +1,26 @@
+
+<ul>
+
+    
+   
+   
+
+
+    <a href="/pelicula/{{pelicula.id}}"><li><strong>{{ pelicula.nombre }}</strong></a></li>
+    
+    <li><strong>Año</strong>: {{ pelicula.año }}</li>
+    <li><strong>Director</strong>: {{ pelicula.director }}</li>
+
+    {% if pelicula.libro %}
+    <li><strong>Libro</strong>: {{ pelicula.libro.nombre }}</li>
+    {% endif %}
+    <li><strong>Nombre:</strong>: {{ pelicula.nombre }}</li>
+    <li><strong>Año</strong>: {{ pelicula.año }}</li>
+    <a href="/pelicula/editar/{{pelicula.id}}">Editar</a>
+    <a href="/pelicula/delete/{{pelicula.id}}">Eliminar</a> 
+
+
+    
+   
+
+</ul>

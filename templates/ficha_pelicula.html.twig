@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title %}Libros{% endblock %}
+{% block body %}
+    <h1>Ficha del pelicula</h1>
+    {% if pelicula %}
+    {{ include ('partials/datos_pelicula.html.twig', { 'pelicula': pelicula }) }}
+    <img src="{{ asset("/images/"~ contacto.file) }}"/>
+    {% else %}
+        <p> Libro no encontrado</p>
+    {% endif %}
+{% endblock %}
